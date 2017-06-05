@@ -8,7 +8,7 @@ var app = express();
 
 // app.use('/static', express.static(__dirname + 'public'))
 
-app.get('/', function(req, res){
+app.get('/arnulfo', function(req, res){
 	res.sendFile(path.join(__dirname + '/index.html'));
 });
 
