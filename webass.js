@@ -1,18 +1,16 @@
 var express = require('express');
 var path = require('path');
 var app = express();
+// var exphbs = require('express-handlebars');
 
-require('net').createServer(function(socket){
-	socket.on('data', function(data){
-		console.log(data.toString());
-	});
+// app.engine('handlerbars', exphbs({defaultLayout: 'home'}));
+// app.set('view engine', 'handlebars')
 
-	socket.write('HTTP/1.1 200 OK\n\n')
-	socket.end();
+// app.use('/static', express.static(__dirname + 'public'))
 
-	app.get('/', function(req, res){
-		res.sendfile(path.join(__dirname + '/index.html'));
-	});
+app.get('/', function(req, res){
+	res.sendfile(path.join(__dirname + '/index.html'));
+});
 
 
-}).listen(5528);
+app.listen(5528);
