@@ -9,7 +9,7 @@ var app = express();
 // app.use('/static', express.static(__dirname + 'public'))
 
 app.get('/', function(req, res){
-	res.sendfile(path.join(__dirname + '/index.html'));
+	res.sendFile(path.join(__dirname + '/index.html'));
 });
 
 
