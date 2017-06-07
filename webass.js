@@ -1,16 +1,24 @@
 var express = require('express');
 var path = require('path');
 var app = express();
-// var exphbs = require('express-handlebars');
+var exphbs = require('express-handlebars');
+var helpers = require('./lib/helpers');
 
-// app.engine('handlerbars', exphbs({defaultLayout: 'home'}));
-// app.set('view engine', 'handlebars')
+app.use(express.static('public'));
+app.engine('handlerbars', exphbs({
+	defaultLayout: 'main',
+	helpers: {}, 
+	partialsDir: 'views/partials/'
+}));
+app.set('view engine', 'handlebars');
 
-// app.use('/static', express.static(__dirname + 'public'))
 
-app.get('/arnulfo', function(req, res){
-	res.sendFile(path.join(__dirname + '/index.html'));
+app.get('/', function(req, res){
+	res.render('home');
 });
 
+app.get('/about', function(req, res){
+	res.render('about');
+});
 
 app.listen(5528);
