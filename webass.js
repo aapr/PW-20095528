@@ -5,9 +5,9 @@ var exphbs = require('express-handlebars');
 var helpers = require('./lib/helpers');
 
 app.use(express.static('public'));
-app.engine('handlerbars', exphbs({
+app.engine('handlebars', exphbs({
 	defaultLayout: 'main',
-	helpers: {}, 
+	helpers: helpers, 
 	partialsDir: 'views/partials/'
 }));
 app.set('view engine', 'handlebars');
@@ -21,4 +21,4 @@ app.get('/about', function(req, res){
 	res.render('about');
 });
 
-app.listen(5528);
+app.listen(process.env.PORT, process.env.IP);
