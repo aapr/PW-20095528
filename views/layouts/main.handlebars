@@ -2,13 +2,17 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Example App</title>
+    {{>header}}
+    <div class='page-header'>
+        <title>Example App</title>
+        <p class='lead' style="text-align:center; font-size:16px; color:limegreen; background:black;">Is the helper correctly implemented? -{{foo}}</p>
+    </div>
 </head>
 <body>
 	{{> navbar}}
-	
-    {{{body}}}
-
+    <div class="container">
+         {{{body}}}
+    </div>
     {{>footer}}
 </body>
 </html>
