@@ -1,6 +1,56 @@
-p {
+.helpers {
+    float: top;
     text-align: center;
     font-size: 16px;
+    font-style: bold;
     color: limegreen;
-    background: black;
+    background: #333;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-style: solid;
+    border-color: #111;
+    border-width: 2px;
+}
+
+nav.topbar > ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+    overflow: hidden;
+}
+
+nav.topbar > ul > li {
+    float: left;
+}
+
+nav.topbar > ul > li > a {
+    color: white;
+    display: block;
+    text-align: center;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-left: 16px;
+    padding-right: 16px;
+    text-decoration: none;
+}
+
+nav.topbar > ul > li > a:hover {
+    background-color: #111;
+}
+
+.active {
+    background-color: #4CAF50;
+}
+
+nav.topbar > ul > li.right {
+    float: right;
+}
+
+@media screen and (max-width: 600px) {
+    nav.topbar > ul > li {
+        float: none;
+    }
 }
