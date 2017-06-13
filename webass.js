@@ -4,7 +4,7 @@ var app = express();
 var exphbs = require('express-handlebars');
 var helpers = require('./lib/helpers');
 
-app.use(express.static('public'));
+app.use('/static',express.static('public'));
 app.engine('handlebars', exphbs({
 	defaultLayout: 'main',
 	helpers: helpers, 
