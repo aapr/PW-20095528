@@ -1,17 +1,13 @@
 .helpers {
-    float: top;
+    position: fixed;
+    top: 0;
+    right: 0;
     text-align: center;
-    font-size: 16px;
-    font-style: bold;
-    color: limegreen;
+    font: 16px, bold;
+    color: #82E0AA;
     background: #333;
-    padding-top: 14px;
-    padding-bottom: 14px;
-    padding-left: 16px;
-    padding-right: 16px;
-    border-style: solid;
-    border-color: #111;
-    border-width: 2px;
+    padding: 8px;
+    border: 2px dotted #186A3B;
 }
 
 nav.topbar > ul {
@@ -49,12 +45,6 @@ nav.topbar > ul > li.right {
     float: right;
 }
 
-@media screen and (max-width: 600px) {
-    nav.topbar > ul > li {
-        float: none;
-    }
-}
-
 .footer {
     position: absolute;
     right: 0;
@@ -68,7 +58,7 @@ nav.topbar > ul > li.right {
 .footer > ul {
     list-style-type: none;
     margin: 0;
-    /*padding: 0;*/
+    padding: 0;
     background-color: #333;
     overflow: hidden;
 }
@@ -80,7 +70,6 @@ nav.topbar > ul > li.right {
 .footer > ul > li > a {
     color: white;
     display: block;
-    /*text-align: center;*/
     padding-top: 14px;
     padding-bottom: 14px;
     padding-left: 16px;
@@ -90,4 +79,15 @@ nav.topbar > ul > li.right {
 
 .footer > ul > li > a:hover {
     background-color: #111;
+}
+
+/*REMEMBER ORDER MATTERS!! - KEEP THIS AT THE BOTTOM*/
+@media screen and (max-width: 600px) {
+    nav.topbar > ul > li {
+        float: none;
+    }
+    
+    .footer > ul > li{
+        float: none;
+    }
 }
