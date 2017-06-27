@@ -45,6 +45,11 @@ nav.topbar > ul > li.right {
     float: right;
 }
 
+html {
+    position: relative;
+    min-height: 100%;
+}
+
 .footer {
     position: absolute;
     right: 0;
@@ -53,6 +58,8 @@ nav.topbar > ul > li.right {
     padding: 1rem;
     background-color: #333;
     text-align: center;
+    height: 100px;
+    width: 100%;
 }
 
 .footer > ul {
@@ -81,6 +88,65 @@ nav.topbar > ul > li.right {
     background-color: #111;
 }
 
+
+.html {
+    text-align: center;
+    text-decoration: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100px;
+    border: 1px solid black;
+    border-radius: 50px;
+    background: black;
+    color: white;
+}
+
+.hasChild {
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom:5px;
+    text-decoration: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100px;
+    border: 1px solid blue;
+    border-radius: 50px;
+    background: blue;
+    color: white;
+}
+
+.child {
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom:5px;
+    text-decoration: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100px;
+    border: 1px solid red;
+    border-radius: 50px;
+    background: red;
+    color: white;
+}
+
+.script {
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom:5px;
+    text-decoration: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100px;
+    border: 1px solid purple;
+    border-radius: 50px;
+    background: purple;
+    color: white;
+}
+
+#container{
+    zoom: 0.65;
+    -moz-transform: scale(0.5);
+}
 /*REMEMBER ORDER MATTERS!! - KEEP THIS AT THE BOTTOM*/
 @media screen and (max-width: 600px) {
     nav.topbar > ul > li {
