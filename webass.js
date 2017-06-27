@@ -21,4 +21,8 @@ app.get('/about', function(req, res){
 	res.render('about');
 });
 
+app.get('/complex', function(req, res) {
+   res.render('complex'); 
+});
+
 app.listen(5528);
