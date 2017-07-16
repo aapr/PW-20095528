@@ -10,6 +10,18 @@
     border: 2px dotted #186A3B;
 }
 
+.button {
+    text-align: center;
+    font: 16px, bold;
+    color: #82E0AA;
+    background: #333;
+    padding: 8px;
+    margin: 15px;
+    border: 2px dotted #186A3B;
+    border-radius: 12px;
+}
+
+
 nav.topbar > ul {
     list-style-type: none;
     margin: 0;

@@ -3,6 +3,7 @@ var path = require('path');
 var app = express();
 var exphbs = require('express-handlebars');
 var helpers = require('./lib/helpers');
+var db = require('./lib/db');
 
 app.use('/static',express.static('public'));
 app.engine('handlebars', exphbs({
@@ -22,7 +23,27 @@ app.get('/about', function(req, res){
 });
 
 app.get('/complex', function(req, res) {
-   res.render('complex'); 
+	res.render('complex'); 
 });
+
+app.get('/login', function(req, res) {
+	res.render('login'); 
+});
+
+app.get('/ingredients', function(req, res){
+	res.render('ingredients');
+	/**/
+});
+
+app.get('/ingredients/pizza', function(req,res){
+	db.simple_find_all(function(results){
+		var result = JSON.stringify(results);
+		/*console.log(result);*/
+		
+		res.contentType('application/json');
+		res.send(result);
+	});
+});
+
 
 app.listen(5528);
