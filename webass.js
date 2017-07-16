@@ -36,7 +36,7 @@ app.get('/ingredients', function(req, res){
 });
 
 app.get('/ingredients/pizza', function(req,res){
-        db.toppings(function(results){
+        db.get_toppings(function(results){
 		var result = JSON.stringify(results);
 		/*console.log(result);*/
 		
