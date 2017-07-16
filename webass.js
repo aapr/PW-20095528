@@ -36,7 +36,13 @@ app.get('/ingredients', function(req, res){
 });
 
 app.get('/ingredients/pizza', function(req,res){
-
+        db.toppings(function(results){
+		var result = JSON.stringify(results);
+		/*console.log(result);*/
+		
+		res.contentType('application/json');
+		res.send(result);
+	});
 });
 
 app.listen(5528);
