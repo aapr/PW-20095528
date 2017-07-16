@@ -8,7 +8,7 @@ var db = require('./lib/db');
 app.use('/static',express.static('public'));
 app.engine('handlebars', exphbs({
 	defaultLayout: 'main',
-	helpers: helpers, 
+	helpers: helpers,
 	partialsDir: 'views/partials/'
 }));
 app.set('view engine', 'handlebars');
@@ -23,11 +23,11 @@ app.get('/about', function(req, res){
 });
 
 app.get('/complex', function(req, res) {
-	res.render('complex'); 
+	res.render('complex');
 });
 
 app.get('/login', function(req, res) {
-	res.render('login'); 
+	res.render('login');
 });
 
 app.get('/ingredients', function(req, res){
@@ -36,14 +36,7 @@ app.get('/ingredients', function(req, res){
 });
 
 app.get('/ingredients/pizza', function(req,res){
-	db.simple_find_all(function(results){
-		var result = JSON.stringify(results);
-		/*console.log(result);*/
-		
-		res.contentType('application/json');
-		res.send(result);
-	});
-});
 
+});
 
 app.listen(5528);

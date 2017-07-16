@@ -1,1 +1,5 @@
 webass_c9.js
+node_modules
+mongod
+data
+.env
