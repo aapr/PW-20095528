@@ -1,5 +1,7 @@
 webass_c9.js
 node_modules
+data/
 mongod
-data
 .env
+**.0
+**.ns
