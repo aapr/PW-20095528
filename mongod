@@ -1,1 +1,0 @@
-sudo mongod --port=27028 --dbpath=/home/arnulfo/arnulfo/data --nojournal --smallfiles --rest "$@"

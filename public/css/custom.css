@@ -1,171 +1,103 @@
-.helpers {
-    position: fixed;
-    top: 0;
-    right: 0;
-    text-align: center;
-    font: 16px, bold;
-    color: #82E0AA;
-    background: #333;
-    padding: 8px;
-    border: 2px dotted #186A3B;
+body {
+  /*margin-top: 64px;*/
+  /*margin-bottom: 32px;*/
+    background-color: #F5F5F5;
 }
 
-.button {
-    text-align: center;
-    font: 16px, bold;
-    color: #82E0AA;
-    background: #333;
-    padding: 8px;
-    margin: 15px;
-    border: 2px dotted #186A3B;
-    border-radius: 12px;
+.thumbnail > img {
+  height: 200px;
+  width: 100%;
+  display: block;
 }
 
-
-nav.topbar > ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    background-color: #333;
-    overflow: hidden;
+td > .btn {
+  margin-right: 8px;
 }
 
-nav.topbar > ul > li {
-    float: left;
+.topping {
+  cursor: pointer;
+  margin-right: 8px;
+  margin-top: 8px;
+  font-size: 18px;
+  background-color: #B71C1C;
 }
 
-nav.topbar > ul > li > a {
-    color: white;
-    display: block;
-    text-align: center;
-    padding-top: 14px;
-    padding-bottom: 14px;
-    padding-left: 16px;
-    padding-right: 16px;
-    text-decoration: none;
+.label {
+  display: inline-block;
 }
 
-nav.topbar > ul > li > a:hover {
-    background-color: #111;
+.hide {
+  display: none;
 }
 
-.active {
-    background-color: #4CAF50;
+#topping-container {
+  padding: 12px 0px;
 }
 
-nav.topbar > ul > li.right {
-    float: right;
+.text-capitalize {
+  text-transform: capitalize;
 }
 
-html {
-    position: relative;
-    min-height: 100%;
+.card {
+  border: 1px #BDBDBD solid;
+  border-radius: 6px;
+  padding: 16px 32px;
+  box-shadow: 2px 2px 12px #888888;
+  margin-bottom: 8px;
+  background-color: #FFF;
 }
 
-.footer {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    padding: 1rem;
-    background-color: #333;
-    text-align: center;
-    height: 100px;
-    width: 100%;
+.btn-primary {
+  background-color: #607D8B;
+  margin-left: 16px;
 }
 
-.footer > ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    background-color: #333;
-    overflow: hidden;
+.label-primary {
+  font-size: 20px;
+  background-color: #F44336;
 }
 
-.footer > ul > li {
-    float: left;
+.navbar-default {
+    background-color: #F44336;
 }
 
-.footer > ul > li > a {
-    color: white;
-    display: block;
-    padding-top: 14px;
-    padding-bottom: 14px;
-    padding-left: 16px;
-    padding-right: 16px;
-    text-decoration: none;
+.navbar-default .navbar-nav>li>a, .navbar-default .navbar-brand {
+  color: #FFF;
 }
 
-.footer > ul > li > a:hover {
-    background-color: #111;
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    background-color: #B71C1C;
+    color: #FFF;
 }
 
-
-.html {
-    text-align: center;
-    text-decoration: none;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    width: 100px;
-    border: 1px solid black;
-    border-radius: 50px;
-    background: black;
-    color: white;
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
+  background-color: #607D8B;
+  color: #FFF;
 }
 
-.hasChild {
-    text-align: center;
-    margin-top: 5px;
-    margin-bottom:5px;
-    text-decoration: none;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    width: 100px;
-    border: 1px solid blue;
-    border-radius: 50px;
-    background: blue;
-    color: white;
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: rgba(255,255,255,0.9);
 }
 
-.child {
-    text-align: center;
-    margin-top: 5px;
-    margin-bottom:5px;
-    text-decoration: none;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    width: 100px;
-    border: 1px solid red;
-    border-radius: 50px;
-    background: red;
-    color: white;
+.caption {
+  margin-bottom: 20px;
 }
 
-.script {
-    text-align: center;
-    margin-top: 5px;
-    margin-bottom:5px;
-    text-decoration: none;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    width: 100px;
-    border: 1px solid purple;
-    border-radius: 50px;
-    background: purple;
-    color: white;
+.card-btn {
+  float: right;
+  top: -10px;
 }
 
-#container{
-    zoom: 0.65;
-    -moz-transform: scale(0.5);
+h3 .label-primary {
+      margin-top: 4px;
 }
-/*REMEMBER ORDER MATTERS!! - KEEP THIS AT THE BOTTOM*/
-@media screen and (max-width: 600px) {
-    nav.topbar > ul > li {
-        float: none;
-    }
-    
-    .footer > ul > li{
-        float: none;
-    }
+
+.btn-primary:hover, .btn-primary:active:hover {
+    background-color: #B71C1C;
+}
+
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+  background-color: #B71C1C;
+  color: #FFF;
 }
